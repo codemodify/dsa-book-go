@@ -1,7 +1,7 @@
 
 # PROBLEM
-- Create an object and make sure it does not get created multiple times.
-- Also, access that object from anywhere.
+- Create a set of objects that implements specific methods but each object nature is different
+- Each object
 
 - Thoughts:
 	- To create an object is easy.

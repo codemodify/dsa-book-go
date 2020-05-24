@@ -19,3 +19,63 @@
 
 >__The missing DSA crouse for Go__
 
+# Helpers - Install Go
+- Official Download Page
+	- https://golang.org/dl
+
+- Shortcuts
+	- Linux
+		- Arch Linux (Desktop/Server non ARM)
+			- `sudo pacman -S go`
+		- Debian/Ubuntu (Desktop/Server non ARM)
+			- `curl -O https://dl.google.com/go/go1.14.3.linux-amd64.tar.gz`
+			- `sudo tar -C /usr/local -xzf go1.14.3.linux-amd64.tar.gz`
+			- `echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.bashrc`
+			- `source ~/.bashrc`
+		- Raspberry Pi
+			- `curl -O https://dl.google.com/go/go1.14.3.linux-armv6l.tar.gz`
+			- `sudo tar -C /usr/local -xzf go1.14.3.linux-armv6l.tar.gz`
+			- `echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.bashrc`
+			- `source ~/.bashrc`
+
+	- macOS
+		- `curl -O https://dl.google.com/go/go1.14.3.darwin-amd64.pkg`
+		- `sudo installer -store -pkg go1.14.3.darwin-amd64.pkg -target /`
+
+	- Windows
+		- `curl -O https://dl.google.com/go/go1.14.3.windows-amd64.msi`
+		- `msiexec /i go1.14.3.windows-amd64.msi /quiet /qn /norestart /log install.log`
+
+# Helpers - Install IDE(s)
+- VSCode
+	- Linux
+		- Arch Linux (Desktop/Server non ARM)
+			- `yay -S visual-studio-code-bin`
+		- Debian/Ubuntu (Desktop/Server non ARM)
+			- `sudo snap install --classic code`
+			- or
+			- `curl -Lk -o code_1.45.1-1589445302_amd64.deb "https://go.microsoft.com/fwlink/?LinkID=760868"`
+			- `sudo apt install ./code_1.45.1-1589445302_amd64.deb`
+		- Raspberry Pi
+			- `https://packagecloud.io/install/repositories/headmelted/codebuilds/script.deb.sh | sudo bash`
+			- `sudo apt-get install code-oss`
+		- RHEL /Fedora / CentOS
+			- `sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc`
+			- `sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'`
+			- `sudo dnf check-update`
+			- `sudo dnf install code`
+		- openSUSE
+			- `sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc`
+			- `sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/zypp/repos.d/vscode.repo'`
+			- `sudo zypper refresh`
+			- `sudo zypper install code`
+		- Nix OS
+			- `nix-env -i vscode`
+
+	- macOS
+		- `curl -O https://dl.google.com/go/go1.14.3.darwin-amd64.pkg`
+		- `sudo installer -store -pkg go1.14.3.darwin-amd64.pkg -target /`
+
+	- Windows
+		- `curl -Lk -o vscode-setup.exe https://aka.ms/win32-x64-user-stable`
+		- `vscode-setup.exe /VERYSILENT /MERGETASKS=!runcode`
