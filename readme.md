@@ -19,6 +19,11 @@
 
 >__The missing DSA crouse for Go__
 
+>__This guide was created with hands on, get to the point approach rather than wasting
+your time with theory and UML diagrams available everywhere, which after reading them
+uou still don't under understand where to start and how to practically approach this__
+
+
 # Helpers - Install Go
 - Official Download Page
 	- https://golang.org/dl
